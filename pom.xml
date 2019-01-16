@@ -76,7 +76,7 @@
             </executions>
 
             <configuration>
-                <sei>fr.extelia.ibabi.ws.convergence.impl.ServiceWSConvergence</sei>
+                <sei>com.howtodoinjava.jaxws.HelloWorld</sei>
                 <sourceDestDir>src/main/java</sourceDestDir>
             </configuration>
 

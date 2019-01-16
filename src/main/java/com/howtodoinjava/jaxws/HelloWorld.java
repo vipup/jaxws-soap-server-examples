@@ -14,10 +14,7 @@ import com.howtodoinjava.soap.Employees;
 @SOAPBinding(style = Style.DOCUMENT) 
 public interface HelloWorld {
 
-	Employee deleteEmployeeById(Integer id);
-
-	Employee updateEmployeeById(Integer id, Employee e);
-
+	Employee deleteEmployeeById(Integer id); 
 	Employee addEmployee(Employee e) throws URISyntaxException;
 	@WebMethod
 	Employees getAllEmployees();

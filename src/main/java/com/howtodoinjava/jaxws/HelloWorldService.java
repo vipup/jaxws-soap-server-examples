@@ -20,11 +20,6 @@ public class HelloWorldService implements HelloWorld{
 	    return new Employee(1,"Deleted Arnold");
 	}
 	 
-	@Override
-	public Employee updateEmployeeById( Integer id, Employee e)
-	{
-		return e;
-	}
  
 	@Override
 	public Employee addEmployee( Employee e ) throws URISyntaxException

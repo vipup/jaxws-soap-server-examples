@@ -33,20 +33,6 @@ public class HelloWorldService implements HelloWorld{
 	}
      
 	@Override
-    public Employee updateEmployeeById( Integer id)
-    {
-         
-        Employee emp = new Employee(id,"Updated Max");
-         
-        emp.setId(id);
-        emp.setName("Lokesh Gupta");
-         
-        
-        return emp;
-    }
-    
-     
-	@Override
     public Employees getAllEmployees()
     {
         Employees list = new Employees();

@@ -7,37 +7,39 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
+import javax.jws.soap.SOAPBinding.Use;
 
 import com.howtodoinjava.soap.Employee;
 import com.howtodoinjava.soap.Employees;
  
 @WebService
+@SOAPBinding(style = Style.DOCUMENT, use=Use.LITERAL)
 public class HelloWorldService
 {
 	
 	@WebMethod
-	@SOAPBinding(style = Style.RPC)
+	 
 	public Employee deleteEmployeeById(Integer id)
 	{      
 	    return new Employee(1,"Deleted Arnold");
 	}
 	
 	@WebMethod
-	@SOAPBinding(style = Style.RPC)
+	 
 	public Employee updateEmployeeById( Integer id, Employee e)
 	{
 		return e;
 	}
 
 	@WebMethod
-	@SOAPBinding(style = Style.RPC)
+	 
 	public Employee addEmployee( Employee e ) throws URISyntaxException
 	{ 
 		return e;
 	}
     
 	@WebMethod
-	@SOAPBinding(style = Style.RPC)
+	 
     public Employee updateEmployeeById( Integer id)
     {
          
@@ -51,8 +53,7 @@ public class HelloWorldService
     }
     
     
-	@WebMethod
-	@SOAPBinding(style = Style.RPC)
+	@WebMethod 
     public Employees getAllEmployees()
     {
         Employees list = new Employees();
@@ -65,8 +66,7 @@ public class HelloWorldService
         return list;
     }
     
-	@WebMethod
-	@SOAPBinding(style = Style.RPC)
+	@WebMethod 
     public String getMsg(String msg)
     {
         String output = "Message requested : " + msg;

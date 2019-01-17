@@ -97,7 +97,7 @@
 
             <configuration>
                 <sei>com.howtodoinjava.jaxws.HelloWorldService</sei>
-                 
+                 <genWsdl>true</genWsdl>     
             </configuration>
 
             <dependencies>

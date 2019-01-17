@@ -85,7 +85,7 @@
         <plugin>
             <groupId>org.jvnet.jax-ws-commons</groupId>
             <artifactId>jaxws-maven-plugin</artifactId>
-            <version>2.4.1</version>
+            
             <executions>
                 <execution>
                  <phase>generate-sources</phase>

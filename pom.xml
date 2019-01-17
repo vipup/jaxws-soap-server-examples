@@ -62,7 +62,24 @@
 
 	<build>
 		<pluginManagement>
-			<plugins>
+			<plugins> 
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>add-source</goal>
+							</goals>
+							<configuration>
+								<sources>
+									<source>${project.build.directory}/generated-sources/wrappers</source>
+								</sources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<groupId>org.jvnet.jax-ws-commons</groupId>
 					<artifactId>jaxws-maven-plugin</artifactId>
@@ -89,29 +106,36 @@
 						</dependency>
 					</dependencies>
 				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>build-helper-maven-plugin</artifactId>
-					<executions>
-						<execution>
-							<phase>generate-sources</phase>
-							<goals>
-								<goal>add-source</goal>
-							</goals>
-							<configuration>
-								<sources>
-									<source>${project.build.directory}/generated-sources/wrappers</source>
-								</sources>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-
 
 			</plugins>
 		</pluginManagement>
 		<plugins>
+				<plugin>
+					<groupId>org.jvnet.jax-ws-commons</groupId>
+					<artifactId>jaxws-maven-plugin</artifactId>
 
+					<executions>
+						<execution>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>wsgen</goal>
+							</goals>
+						</execution>
+					</executions>
+
+					<configuration>
+						<sei>com.howtodoinjava.jaxws.HelloWorldService</sei>
+						<genWsdl>true</genWsdl>
+					</configuration>
+
+					<dependencies>
+						<dependency>
+							<groupId>com.sun.xml.ws</groupId>
+							<artifactId>jaxws-tools</artifactId>
+							<version>2.2.5</version>
+						</dependency>
+					</dependencies>
+				</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>

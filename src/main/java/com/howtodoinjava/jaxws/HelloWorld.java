@@ -13,7 +13,7 @@ import com.howtodoinjava.soap.Employees;
  
 //Service Endpoint Interface
 @WebService
-@SOAPBinding(style = Style.DOCUMENT) 
+@SOAPBinding(style = Style.RPC) 
 public interface HelloWorld {
 	@WebMethod
 	Employee deleteEmployeeById(Integer id);

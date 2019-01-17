@@ -90,7 +90,7 @@
                 <execution>
                  <phase>generate-sources</phase>
                     <goals>
-                        <goal>add-source</goal>
+                        <goal>wsgen</goal>
                     </goals>
                 </execution>
             </executions>

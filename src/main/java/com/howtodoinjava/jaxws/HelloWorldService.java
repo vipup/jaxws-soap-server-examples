@@ -14,7 +14,7 @@ import com.howtodoinjava.soap.Employees;
 @WebService(endpointInterface = "com.howtodoinjava.jaxws.HelloWorld")
 public class HelloWorldService implements HelloWorld{
 	public Employee deleteEmployeeById(Integer id) {
-		return new Employee(1, "Deleted Arnold");
+		return new Employee(id, "Deleted Arnold");
 	}
 
 	@Override

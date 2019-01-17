@@ -26,17 +26,7 @@ public class HelloWorldService implements HelloWorld{
 	public Employee addEmployee(Employee e) throws URISyntaxException {
 		return e;
 	}
-
-	@Override
-	public Employee updateEmployeeById(Integer id) {
-
-		Employee emp = new Employee(id, "Updated Max");
-
-		emp.setId(id);
-		emp.setName("Lokesh Gupta");
-
-		return emp;
-	}
+ 
 
 	@Override
 	public Employees getAllEmployees() {

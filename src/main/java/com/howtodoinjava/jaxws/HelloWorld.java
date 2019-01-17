@@ -21,8 +21,7 @@ public interface HelloWorld {
 	Employee updateEmployeeById(Integer id, Employee e);
 	@WebMethod
 	Employee addEmployee(Employee e) throws URISyntaxException;
-	@WebMethod
-	Employee updateEmployeeById(Integer id);
+ 
 	@WebMethod
 	Employees getAllEmployees();
 	

@@ -2,6 +2,7 @@ package com.howtodoinjava.jersey;
 
 import static org.junit.Assert.*;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 import org.junit.Test;
@@ -27,7 +28,7 @@ public class EmployeeTest {
 		assertEquals(  "Text Name" , e.getName());
 
 		// ...
-		e = new Employee(11, "Text Name", new Date(), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "test@java.lang", Gender.BIGENDER, true);
+		e = new Employee(11, "Text Name", new BigInteger(""+new Date().getTime()), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "test@java.lang", Gender.BIGENDER, true);
 		assertEquals(  e.getId(), new Integer(11));
 		assertEquals(  "Text Name", e.getName() );
 		assertNotNull( e.getDob() );

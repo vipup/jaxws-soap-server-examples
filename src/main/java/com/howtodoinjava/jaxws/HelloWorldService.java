@@ -20,7 +20,7 @@ public class HelloWorldService implements HelloWorld{
 	}
 	@Override
 	public Employee deleteEmployeeById(Integer id) {
-		return new Employee(1, "Deleted Arnold");
+		return new Employee(id, "Deleted Arnold");
 	}
 
 	@Override

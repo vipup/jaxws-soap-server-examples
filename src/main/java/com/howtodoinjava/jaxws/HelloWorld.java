@@ -7,16 +7,22 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
+import javax.jws.soap.SOAPBinding.Use;
 
 import com.howtodoinjava.soap.Employee;
 import com.howtodoinjava.soap.Employees;
  
 //Service Endpoint Interface
 @WebService
+ 
 @SOAPBinding(style = Style.DOCUMENT) 
+ 
 public interface HelloWorld {
 	@WebMethod
 	Employee deleteEmployeeById(Integer id);
+	@WebMethod
+	Employee getEmployeeById(Integer id);
+
 	@WebMethod
 	Employee updateEmployeeById(Integer id, Employee e);
 	@WebMethod

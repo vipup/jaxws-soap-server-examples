@@ -1,5 +1,6 @@
 package com.howtodoinjava.jaxws;
    
+import java.math.BigInteger;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,7 +42,7 @@ public class HelloWorldService implements HelloWorld{
 	
 	
 	static final Employees list = new Employees();
-	static final Employee emp = new Employee(11, "Java To Wsdl", new Date(0), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "java@jax.ws", com.howtodoinjava.soap.Gender.BIGENDER, true);
+	static final Employee emp = new Employee(11, "Java To Wsdl", new BigInteger( ""+new Date(0).getTime()), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "java@jax.ws", com.howtodoinjava.soap.Gender.BIGENDER, true);
 
 	static {
 		list.setEmployeeList(new ArrayList<Employee>());

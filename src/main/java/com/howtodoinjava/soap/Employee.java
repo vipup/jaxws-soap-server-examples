@@ -1,5 +1,6 @@
 package com.howtodoinjava.soap;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -11,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Employee {
 	private Integer id;
 	private String name;
-	private Date dob;
+	private BigInteger dob;
 	private Double lat;
 	private Float lon;
 	private Long phone;
@@ -29,7 +30,7 @@ public class Employee {
 		try {
 			this.setId((Integer) o[index++]);
 			this.setName((String) o[index++]);
-			this.setDob( (Date) o[index++]);
+			this.setDob( (BigInteger) o[index++]);
 			this.setLat( (Double) o[index++]);
 			this.setLon( (Float) o[index++]);
 			this.setPhone((Long) o[index++]);
@@ -77,11 +78,11 @@ public class Employee {
 		this.sex = sex;
 	}
 
-	public Date getDob() {
+	public BigInteger getDob() {
 		return dob;
 	}
 
-	public void setDob(Date dob) {
+	public void setDob(BigInteger dob) {
 		this.dob = dob;
 	}
 

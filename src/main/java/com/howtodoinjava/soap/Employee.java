@@ -16,7 +16,7 @@ public class Employee {
 	private Float lon;
 	private Long phone;
 	private String email;
-	private Gender sex;
+//	private Gender sex;
 	private Boolean alive;
 
 	public Employee() {
@@ -34,7 +34,7 @@ public class Employee {
 			this.setLon( (Float) o[index++]);
 			this.setPhone((Long) o[index++]);
 			this.setEmail((String) o[index++]);
-			this.setSex( (Gender) o[index++]);
+//			this.setSex( (Gender) o[index++]);
 			this.setAlive((Boolean) o[index++]);
 			
 		}catch(Exception e) {
@@ -69,13 +69,13 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + "]";
 	}
 
-	public Gender getSex() {
-		return sex;
-	}
-
-	public void setSex(Gender sex) {
-		this.sex = sex;
-	}
+//	public Gender getSex() {
+//		return sex;
+//	}
+//
+//	public void setSex(Gender sex) {
+//		this.sex = sex;
+//	}
 
 	public Date getDob() {
 		return dob;

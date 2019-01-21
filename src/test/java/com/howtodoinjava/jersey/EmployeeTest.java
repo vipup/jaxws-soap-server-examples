@@ -27,7 +27,8 @@ public class EmployeeTest {
 		assertEquals(  "Text Name" , e.getName());
 
 		// ...
-		e = new Employee(11, "Text Name", new Date(), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "test@java.lang", Gender.BIGENDER, true);
+//		e = new Employee(11, "Text Name", new Date(), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "test@java.lang", Gender.BIGENDER, true);
+		e = new Employee(11, "Text Name", new Date(), Math.PI, Float.MIN_VALUE , Long.MAX_VALUE, "test@java.lang", true);
 		assertEquals(  e.getId(), new Integer(11));
 		assertEquals(  "Text Name", e.getName() );
 		assertNotNull( e.getDob() );
@@ -36,7 +37,7 @@ public class EmployeeTest {
 		assertNotNull( e.getLon()  );
 		assertNotNull( e.getPhone()   );
 		assertNotNull( e.getPhone()   );
-		assertEquals( Gender.BIGENDER,  e.getSex() );
+//		assertEquals( Gender.BIGENDER,  e.getSex() );
 		assertTrue( e.getAlive() );
 		
 	}
